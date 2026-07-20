@@ -11,6 +11,7 @@
   --radius: 18px;
 }
 
+/* Global reset & base */
 * {
   box-sizing: border-box;
 }
@@ -41,7 +42,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Layout */
+/* Layout with left sidebar */
 .layout {
   display: flex;
   min-height: 100vh;
@@ -71,6 +72,7 @@ a:hover {
   display: block;
 }
 
+/* Vertical main nav */
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -89,14 +91,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Page content */
+/* Right-hand page content */
 .page {
-  margin-left: 240px;
-  width: calc(100% - 240px);
+  margin-left: 240px;           /* same as sidebar width */
   min-height: 100vh;
-  padding: 0;
 }
 
+/* Header (neutral, no sticky bar) */
 .site-header {
   background: transparent;
   border-bottom: none;
@@ -121,6 +122,7 @@ a:hover {
   align-items: start;
 }
 
+/* Typography */
 .eyebrow {
   margin: 0 0 10px;
   text-transform: uppercase;
@@ -157,6 +159,7 @@ h3 {
   max-width: 62ch;
 }
 
+/* Buttons */
 .hero-actions {
   display: flex;
   gap: 14px;
@@ -195,6 +198,7 @@ h3 {
   text-decoration: none;
 }
 
+/* Cards and boxes */
 .hero-card,
 .card,
 .info-box,
@@ -220,16 +224,22 @@ h3 {
 /* Sections */
 .section {
   padding: 28px 0 72px;
+  scroll-margin-top: 24px;    /* so anchor scroll doesn’t hide section top */
 }
 
 .section.alt {
-  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.95));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.95)
+  );
 }
 
 .section-heading {
   margin-bottom: 22px;
 }
 
+/* Grid of cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -251,6 +261,7 @@ h3 {
   color: var(--text);
 }
 
+/* Legal section */
 .legal {
   padding-bottom: 56px;
 }
@@ -270,11 +281,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Better anchor position */
-.section {
-  scroll-margin-top: 24px;
-}
-
 /* Responsive */
 @media (max-width: 860px) {
   .layout {
@@ -289,7 +295,6 @@ h3 {
 
   .page {
     margin-left: 0;
-    width: 100%;
   }
 
   .hero-grid,
