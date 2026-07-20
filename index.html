@@ -7,8 +7,8 @@
         content="Navigator Healthcare S.à r.l. helps clients navigate improvement in their data, systems, and digital presence through database management, web development, and analytical support." />
   <title>Navigator Healthcare S.à r.l.</title>
 
-  <!-- Favicon: adjust href if the filename is different -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Favicon: nhc favicon.ico must be in the repo root -->
+  <link rel="shortcut icon" type="image/x-icon" href="nhc favicon.ico" />
 
   <!-- Fonts and styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,14 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <a href="#home" class="logo-wrap" aria-label="Navigator Healthcare home">
-        <!-- Make sure this filename matches the logo in your repo -->
+        <!-- Make sure this filename matches the logo file in your repo -->
         <img src="N LOGO Navigator Healthcare SARL.png" alt="Navigator Healthcare S.à r.l. logo" class="logo" />
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#requests">Requests</a>
         <a href="#approach">Approach</a>
         <a href="#about">Company</a>
         <a href="#contact">Contact</a>
@@ -39,7 +40,7 @@
     <div class="page" id="home">
       <header class="site-header">
         <div class="container header-inner">
-          <!-- Header is neutral now; logo and nav are in the sidebar -->
+          <!-- Header content is neutral; logo and nav are in the sidebar -->
         </div>
       </header>
 
@@ -56,7 +57,7 @@
               </p>
               <div class="hero-actions">
                 <a href="#services" class="btn btn-primary">View services</a>
-                <a href="#contact" class="btn btn-secondary">Contact us</a>
+                <a href="#requests" class="btn btn-secondary">Request a project</a>
               </div>
             </div>
 
@@ -163,6 +164,67 @@
                   messaging, structure, and expansion plans are perceived by customers and staff.
                 </p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- REQUESTS: PROJECT / AUDIT + SIGNUP -->
+        <section class="section" id="requests">
+          <div class="container split">
+            <div>
+              <p class="eyebrow">Requests</p>
+              <h2>Request a project or website audit</h2>
+              <p>
+                Navigator Healthcare S.à r.l. is currently handling a limited number of projects.
+                New contracts and admissions for larger projects are expected to start from early 2027.
+              </p>
+              <p>
+                You can already tell us about your needs using the form on this page. We review requests to understand
+                where database, workflow, or website improvements could help, and then discuss possible solutions and timelines.
+              </p>
+
+              <div class="info-box" style="margin-top: 18px;">
+                <h3>Stay informed</h3>
+                <p>
+                  If you would like to be informed when new project slots open, you can also send a short message
+                  indicating your interest and the type of support you may need. This helps plan admissions for 2027.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <h3>Project / audit request form</h3>
+              <form action="mailto:contact@navigator-healthcare.com" method="post" enctype="text/plain">
+                <label for="name">Name</label><br />
+                <input id="name" name="name" type="text" required /><br /><br />
+
+                <label for="email">Email</label><br />
+                <input id="email" name="email" type="email" required /><br /><br />
+
+                <label for="company">Company (optional)</label><br />
+                <input id="company" name="company" type="text" /><br /><br />
+
+                <label for="website">Current website URL (if requesting an audit)</label><br />
+                <input id="website" name="website" type="url" /><br /><br />
+
+                <label for="type">Type of request</label><br />
+                <select id="type" name="type" required>
+                  <option value="">Please select</option>
+                  <option value="database">Database / back-office solution</option>
+                  <option value="website">New website or redesign</option>
+                  <option value="audit">Website audit / evaluation</option>
+                  <option value="analysis">Marketing / expansion analysis</option>
+                  <option value="other">Other / stay informed</option>
+                </select><br /><br />
+
+                <label for="details">Short description of your needs or interest</label><br />
+                <textarea id="details" name="details" rows="5" required></textarea><br /><br />
+
+                <label for="timeline">Preferred timeline</label><br />
+                <input id="timeline" name="timeline" type="text" placeholder="Start of 2027 or later" /><br /><br />
+
+                <button class="btn btn-primary" type="submit">Send request by email</button>
+              </form>
             </div>
           </div>
         </section>
