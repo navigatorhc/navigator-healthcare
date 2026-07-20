@@ -62,8 +62,14 @@ a:hover {
 }
 
 .sidebar .logo-wrap {
-  display: block;
-  margin-bottom: 24px;
+  display: inline-block;
+  max-width: 320px;      /* adjust if needed */
+}
+
+@media (max-width: 860px) {
+  .logo-wrap {
+    max-width: 240px;    /* smaller on tablet/phone */
+  }
 }
 
 .sidebar .logo {
@@ -100,9 +106,13 @@ a:hover {
 
 /* Header (neutral, no sticky bar) */
 .site-header {
-  background: transparent;
-  border-bottom: none;
-  position: static;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  overflow: visible;     /* important: don’t cut off logo */
 }
 
 .header-inner {
@@ -110,7 +120,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 0;      /* slightly more space */
+  padding: 18px 0;       /* slightly more vertical padding */
+  overflow: visible;     /* avoid clipping child content */
 }
 
 /* Hero */
@@ -314,7 +325,12 @@ h3 {
   }
 
   .logo {
-    height: 56px;
+  display: block;
+  max-height: 80px;      /* gives more room vertically */
+  height: auto;
+  max-width: 100%;       /* don’t overflow the container */
+  object-fit: contain;   /* scale the image without cropping */
+}
   }
 
   .main-nav {
