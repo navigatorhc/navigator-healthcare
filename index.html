@@ -1,72 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+        content="Navigator Healthcare S.à r.l. helps clients navigate improvement in their data, systems, and digital presence through database management, web development, and analytical support." />
+  <title>Navigator Healthcare S.à r.l.</title>
+
+  <!-- Favicon: adjust href if the filename is different -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Fonts and styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <div class="layout">
-   /* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a href="#home" class="logo-wrap" aria-label="Navigator Healthcare home">
+        <!-- Make sure this filename matches the logo in your repo -->
+        <img src="nav hc sarl logo 2023.png" alt="Navigator Healthcare S.à r.l. logo" class="logo" />
+      </a>
 
-/* Sidebar */
-.sidebar {
-  width: 240px;
-  background: var(--primary-dark);
-  color: white;
-  padding: 24px 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-y: auto;
-}
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">Company</a>
+        <a href="#contact">Contact</a>
+        <a href="#legal">Legal</a>
+      </nav>
+    </aside>
 
-.sidebar .logo-wrap {
-  display: block;
-  margin-bottom: 24px;
-}
+    <!-- PAGE CONTENT -->
+    <div class="page" id="home">
+      <header class="site-header">
+        <div class="container header-inner">
+          <!-- Header is neutral now; logo and nav are in the sidebar -->
+        </div>
+      </header>
 
-.sidebar .logo {
-  height: 64px;
-  width: auto;
-  display: block;
-}
-
-/* Vertical menu */
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.main-nav a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 6px 4px;
-}
-
-.main-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Page content to the right, still centered */
-.page {
-  margin-left: 240px;               /* same as sidebar width */
-  min-height: 100vh;
-}
-
-/* Remove sticky header bar; keep it neutral */
-.site-header {
-  background: transparent;
-  border-bottom: none;
-  position: static;
-}
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
-.header-inner {
-  display: block;
-  padding: 0;
-}
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Navigator Healthcare S.à r.l.</p>
+              <h1>Helping clients navigate improvement in data, systems, and digital presence.</h1>
+              <p class="lead">
+                Navigator Healthcare S.à r.l. supports clients in managing and improving their customer databases,
+                as well as developing and maintaining websites, so operations, analysis, and online presence work together smoothly.
+              </p>
+              <div class="hero-actions">
+                <a href="#services" class="btn btn-primary">View services</a>
+                <a href="#contact" class="btn btn-secondary">Contact us</a>
+              </div>
+            </div>
 
             <div class="hero-card">
               <h2>Core focus</h2>

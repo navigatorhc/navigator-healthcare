@@ -63,7 +63,15 @@ a:hover {
 
 .sidebar .logo-wrap {
   display: inline-block;
-  max-width: 320px;      /* adjust if needed */
+  /* Set a safe maximum width so the logo always fits in the header */
+  max-width: 280px;      /* adjust up/down depending on how it looks */
+}
+
+.logo {
+  display: block;
+  width: 100%;           /* scales to fit the container width */
+  height: auto;
+  object-fit: contain;   /* keeps full logo visible, no cropping */ /* adjust if needed */
 }
 
 @media (max-width: 860px) {
@@ -112,7 +120,16 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 20;
-  overflow: visible;     /* important: don’t cut off logo */
+  overflow: visible;     /* important: no horizontal clipping */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+  overflow: visible;
 }
 
 .header-inner {
