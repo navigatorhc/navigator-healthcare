@@ -67,8 +67,9 @@ a:hover {
 }
 
 .sidebar .logo {
-  height: 64px;
-  width: auto;
+  max-height: 72px;      /* slightly taller, but limited */
+  height: auto;
+  max-width: 100%;       /* don’t overflow its container */
   display: block;
 }
 
@@ -105,8 +106,11 @@ a:hover {
 }
 
 .header-inner {
-  display: block;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;      /* slightly more space */
 }
 
 /* Hero */
