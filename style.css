@@ -41,24 +41,31 @@ a:hover {
   margin: 0 auto;
 }
 
-.site-header {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-}
-
-.header-inner {
+/* Layout */
+.layout {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 14px 0;
+  min-height: 100vh;
 }
 
-.logo {
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--primary-dark);
+  color: white;
+  padding: 24px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar .logo-wrap {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.sidebar .logo {
   height: 64px;
   width: auto;
   display: block;
@@ -66,15 +73,42 @@ a:hover {
 
 .main-nav {
   display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .main-nav a {
-  color: var(--text);
+  color: white;
   font-weight: 600;
+  text-decoration: none;
+  padding: 6px 4px;
 }
 
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Page content */
+.page {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  padding: 0;
+}
+
+.site-header {
+  background: transparent;
+  border-bottom: none;
+  position: static;
+}
+
+.header-inner {
+  display: block;
+  padding: 0;
+}
+
+/* Hero */
 .hero {
   padding: 72px 0 48px;
 }
@@ -183,6 +217,7 @@ h3 {
   color: var(--muted);
 }
 
+/* Sections */
 .section {
   padding: 28px 0 72px;
 }
@@ -220,6 +255,7 @@ h3 {
   padding-bottom: 56px;
 }
 
+/* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
   background: white;
@@ -234,16 +270,32 @@ h3 {
   flex-wrap: wrap;
 }
 
+/* Better anchor position */
+.section {
+  scroll-margin-top: 24px;
+}
+
+/* Responsive */
 @media (max-width: 860px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .page {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .hero-grid,
   .split,
   .cards {
     grid-template-columns: 1fr;
-  }
-
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
